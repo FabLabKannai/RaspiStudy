@@ -1,0 +1,35 @@
+<html>
+<!-- 2016-05-01 K.OHWADA @ FabLab Kannai -->
+<head>
+<title>jQuery Post Sample</title>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+function get(){
+	$.getJSON("person.json", function(data){
+		var str = "My name is " + data.name + ".<br/>";
+		str += "I am " + data.age + ".<br/>";
+		$("#data").html(str);
+	});
+}
+function post(){
+	var wdata = {
+		"name": $("#name").val(),
+		"age": $("#age").val()
+	};
+	$.post("post.php", wdata);
+}
+</script>
+</head>
+<body>
+<h1>jQuery Post Sample</h1>
+<br/>
+<!-- post begin -->
+name: <input type="text" id="name" /><br/>
+age: <input type="text" id="age" /><br/>
+<button type="button" onClick="post();">Post</button><br/>
+<!-- post end -->
+<br/>
+<button type="button" onClick="get();">Get</button><br/><br/>
+<div id="data"></div>
+</body>
+</html>

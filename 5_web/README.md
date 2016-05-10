@@ -9,8 +9,15 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 
 ## Sample
 ### Local PC
+- 11 plane
+- 12 HTML
+- 13 JavaScript
+- 14 jQuery
 
 ### Apache
+- 21 php
+- 22 get method
+- 23 put method
 
 ### Flisk
 - 31 hello
