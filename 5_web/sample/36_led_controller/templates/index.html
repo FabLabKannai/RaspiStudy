@@ -1,0 +1,25 @@
+<html>
+<!-- 2016-05-01 K.OHWADA @ FabLab Kannai -->
+<head>
+<title>LED Controller</title>
+<link rel="stylesheet" type="text/css" href="/static/style.css" />
+<script type="text/javascript" src="/static/jquery.min.js"></script>
+<script type="text/javascript">
+// post method
+function post(val){
+	var data = {
+		"led": val
+	};
+	$.post("/action", data);
+}
+</script>
+</head>
+<body>
+<h1>LED Controller</h1>
+<!-- post begin -->
+<button type="button" class="off" onClick="post(0);">Off</button> &nbsp;
+<button type="button" class="on" onClick="post(1);">On</button> &nbsp;
+<button type="button" class="blink" onClick="post(2);">Blink</button>
+<!-- post end -->
+</body>
+</html>

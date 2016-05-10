@@ -1,0 +1,35 @@
+<html>
+<!-- 2016-05-01 K.OHWADA @ FabLab Kannai -->
+<head>
+<title>Flask JQuery</title>
+<script type="text/javascript" src="/static/jquery.min.js"></script>
+<script type="text/javascript">
+// get method
+function get(){
+	$.get("/action", function(data){
+		$("#data").html(data);
+	});
+}
+// post method
+function post(){
+	var data = {
+		"name": $("#name").val(),
+		"age": $("#age").val()
+	};
+	$.post("/action", data);
+}
+</script>
+</head>
+<body>
+<h1>Flask Sample with JQuery</h1>
+<br/>
+<!-- post begin -->
+name: <input type="text" id="name" /><br/>
+age: <input type="text" id="age" /><br/>
+<button type="button" onClick="post();">Post</button><br/>
+<!-- post end -->
+<br/>
+<button type="button" onClick="get();">Get</button><br/><br/>
+<div id="data"></div>
+</body>
+</html>
