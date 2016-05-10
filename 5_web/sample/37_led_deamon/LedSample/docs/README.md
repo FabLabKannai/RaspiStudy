@@ -38,4 +38,5 @@ $ sudo /etc/init.d/led-sample start <br>
 
 ### Usage
 Access using web browser. <br>
-http://localhost:5010 <br>
+http://IP_ADDR:5010 <br>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/sample/37_led_deamon/LedSample/docs/37_led_deamon.png" width="300" /> <br/>
