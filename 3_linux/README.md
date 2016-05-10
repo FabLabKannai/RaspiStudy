@@ -11,8 +11,8 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 
 ### LED On / Off
 Connect LED to GPIO 17 <br/>
-> $ sudo su -
-> $ echo "17" > /sys/class/gpio/export
-> $ echo "out" > /sys/class/gpio/gpio17/direction
-> $ echo "1" > /sys/class/gpio/gpio17/value
-> $ echo "0" > /sys/class/gpio/gpio17/value
+> $ sudo su - <br/>
+$ echo "17" > /sys/class/gpio/export <br/>
+$ echo "out" > /sys/class/gpio/gpio17/direction <br/>
+$ echo "1" > /sys/class/gpio/gpio17/value <br/>
+$ echo "0" > /sys/class/gpio/gpio17/value <br/>
