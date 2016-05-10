@@ -16,3 +16,4 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx
 ## 5. Web App
 
 ## 6. Robot Car
+<img src="https://github.com/FabLabKannai/SumobotJr/blob/master/docs/completion.jpg" width="200" />
