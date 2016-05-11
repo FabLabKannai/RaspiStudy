@@ -29,6 +29,6 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - 34 jQuery
 - 35 LED UI
 - 36 LED controller
-- 37 LED deamon
+- 37 LED daemon
 
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/sample/37_led_deamon/LedSample/docs/37_led_deamon.png" width="200" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/sample/37_led_daemon/LedSample/docs/37_led_daemon.png" width="200" /> <br/>

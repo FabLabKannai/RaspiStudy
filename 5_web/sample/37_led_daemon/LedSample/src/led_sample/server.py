@@ -10,8 +10,10 @@ led = Led()
 
 # server_run
 def server_run(host, port, pin):
-	app.run(host=str(host), port=int(port))
+	 # MUST execute before app.run
 	led.setPin(int(pin))
+	 # always last
+	app.run(host=str(host), port=int(port))
 
 # route index
 @app.route('/')

@@ -21,6 +21,7 @@ class Led():
 		pass
 		
 	def setPin(self, pin):
+		print "pin " + str(pin)
 		self.pin = int(pin)
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setup(self.pin, GPIO.OUT)
@@ -32,12 +33,15 @@ class Led():
 
 	def command(self, c):
 		if c == 0:
+			print "LED Off"
 			self.th.stopBlink()
 			GPIO.output(self.pin, False)
 		elif c == 1:
+			print "LED On"
 			self.th.stopBlink()
 			GPIO.output(self.pin, True)
 		elif c == 2:
+			print "LED Blink"
 			self.th.startBlink()
 
 # end of class

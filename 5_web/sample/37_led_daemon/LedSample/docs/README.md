@@ -15,7 +15,7 @@ $ sudo pip install virtualenv <br>
 $ cd /tmp<br>
 $ git clone https://github.com/FabLabKannai/RaspiStudy.git <br>
 $ mkdir ~/RaspiStudy/ <br>
-$ mv RaspiStudy/5_web/sample/37_led_deamon/LedSample/ ~/RaspiStudy/ <br>
+$ mv RaspiStudy/5_web/sample/37_led_daemon/LedSample/ ~/RaspiStudy/ <br>
 
 $ cd ~/RaspiStudy <br>
 $ virtualenv venv <br>
@@ -26,17 +26,17 @@ $ source venv/bin/activate <br>
 (venv) $ python setup.py install <br>
 $ deactivate <br>
 
-you can use service deamon <br>
+you can use service daemon <br>
 $ sudo sh init.sh <br>
 
 ### Run
 $ cd ~<br>
 $ sudo RaspiStudy/venv/bin/led_sample <br>
 
-or service deamon <br>
+or service daemon <br>
 $ sudo /etc/init.d/led-sample start <br>
 
 ### Usage
 Access using web browser. <br>
 http://IP_ADDR:5010 <br>
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/sample/37_led_deamon/LedSample/docs/37_led_deamon.png" width="300" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/sample/37_led_daemon/LedSample/docs/37_led_daemon.png" width="300" /> <br/>
