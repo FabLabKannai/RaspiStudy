@@ -1,20 +1,24 @@
 # Configuration for /etc/init.d/led-sample
-# Author: Kenichi Ohwada
+# 2016-05-01 K.OHWADA @ FabLab Kannai
 
 # The init.d script will only run if this variable non-empty.
 LED_USER=root
 
-# On what port to run daemon, default is 9010
+# On what host to run daemon, default is 0.0.0.0
+HOST="0.0.0.0"
+
+# On what port to run daemon, default is 5010
 PORT=5010
+
+# On what LED pin to run daemon, default is 11
+PIN_LED=11
 
 # Path to the OctoPrint executable, use this to override the default setting "/usr/bin/led-sample"
 #DAEMON=/path/to/led-sample/executable
-#DAEMON=/home/pi/GpioLed/venv/bin/led-sample
-#DAEMON=/usr/local/bin/led-sample
 DAEMON=/home/pi/RaspiStudy/venv/bin/led_sample
 
 # What arguments to pass to led-sample, usually no need to touch this
-DAEMON_ARGS="--port=$PORT"
+DAEMON_ARGS="--host=$HOST --port=$PORT --pin=$PIN_LED"
 
 # Umask of files led-sample generates, Change this to 000 if running led-sample as its own, separate user
 UMASK=022

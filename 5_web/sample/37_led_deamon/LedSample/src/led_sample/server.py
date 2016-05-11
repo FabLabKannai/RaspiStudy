@@ -4,16 +4,14 @@
 from flask import Flask, render_template, request
 from led import Led
 
-# constant
-PIN = 11
-
 # Flask start
 app = Flask(__name__)
-led = Led(PIN)
+led = Led()
 
 # server_run
-def server_run(host, port):
-	app.run(host=host, port=port)
+def server_run(host, port, pin):
+	app.run(host=str(host), port=int(port))
+	led.setPin(int(pin))
 
 # route index
 @app.route('/')

@@ -17,7 +17,10 @@ class Led():
 	th = None
 	pin = 0
 
-	def __init__(self, pin):
+	def __init__(self):
+		pass
+		
+	def setPin(self, pin):
 		self.pin = int(pin)
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setup(self.pin, GPIO.OUT)

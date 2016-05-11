@@ -1,4 +1,5 @@
 #!/bin/sh
+# 2016-05-01 K.OHWADA @ FabLab Kannai
 
 ### BEGIN INIT INFO
 # Provides:          led-sample
@@ -8,12 +9,10 @@
 # Should-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: GpioLed daemon
-# Description:       Starts the GpioLed daemon with the user specified in
+# Short-Description: LED daemon
+# Description:       Starts the LED daemon with the user specified in
 #                    /etc/default/led-sample.
 ### END INIT INFO
-
-# Author: Kenichi Ohwada
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DESC="LED Daemon"
