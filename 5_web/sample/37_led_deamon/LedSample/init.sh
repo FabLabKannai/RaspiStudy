@@ -7,3 +7,4 @@ chmod 755 /etc/init.d/led-sample
 cp scripts/led-sample.default /etc/default/led-sample
 chmod 644 /etc/default/led-sample
 insserv led-sample
+systemctl daemon-reload

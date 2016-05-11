@@ -15,9 +15,9 @@ $ sudo pip install virtualenv <br>
 $ cd /tmp<br>
 $ git clone https://github.com/FabLabKannai/RaspiStudy.git <br>
 $ mkdir ~/RaspiStudy/ <br>
-$ cp RaspiStudy/5_web/sample/37_led_deamon/LedSample/ ~/RaspiStudy/ <br>
+$ mv RaspiStudy/5_web/sample/37_led_deamon/LedSample/ ~/RaspiStudy/ <br>
 
-$ cd ~/RaspiStudy
+$ cd ~/RaspiStudy <br>
 $ virtualenv venv <br>
 ( You do not need to excute this command more than once, if you excuted this at once. ) <br>
 
