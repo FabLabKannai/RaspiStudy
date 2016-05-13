@@ -1,11 +1,15 @@
 # Linux - Raspberry Pi Study
 
 ## WebSite (Japanese)
-http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
+http://fabble.cc/fablabkannai/rapsberryxpixxxlinux <br/>
 
 - What is Linux
 - Shell command
 - Controll GPIO by shell
+
+## Docs
+- History of Unix/Linux
+- History of UNIX computer
 
 ## Sample
 
