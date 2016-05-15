@@ -7,7 +7,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/1_introduction/raspberry_pi_parts.png" width="200" /> <br/>
 
 ## 2. Install
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/connection_serial.png" width="200" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/docs/connection_serial.png" width="200" /> <br/>
 
 ## 3. Linux
 
@@ -16,4 +16,4 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx
 ## 5. Web App
 
 ## 6. Robot Car
-<img src="https://github.com/FabLabKannai/SumobotJr/blob/master/docs/completion.jpg" width="200" />
+<img src="https://github.com/FabLabKannai/SumobotJr/blob/master/docs/arduino_ver.jpg" width="200" />
