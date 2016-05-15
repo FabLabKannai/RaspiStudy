@@ -9,4 +9,24 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - SSH connection
 - SD card backup
 
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/connection_serial.png" width="300" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/docs/connection_serial.png" width="300" /> <br/>
+
+## Tools
+Tools for Raspberry Pi <br/>
+
+### on Raspberry Pi
+Tools for Raspberry Pi <br/>
+- expand_rootfs.sh <br/>
+  Expand root filesystems to any size <br/>
+- keyboard <br/>
+  Keyboard default file for Japanese 109 keyboard <br/>
+- vncboot <br/>
+  Script to start tightvncserver daemon <br/>
+
+### on MAC
+Tools for Raspberry Pi  on MAC <br/>
+- backup_sd.py <br/>
+  Backup SD card of Raspberry Pi. <br/>
+
+## Docs
+- The physical connection for Raspberry Pi <br/>

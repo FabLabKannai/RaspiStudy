@@ -6,16 +6,19 @@ import time
 
 # main
 PIN = 11
+INTERVAL = 1
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(PIN, GPIO.OUT)
 
 try:
 	# endless loop
 	while True:
-		GPIO.output(PIN, False)
-		time.sleep(1)
-		GPIO.output(PIN, True)
-		time.sleep(1)	
+		# LED off
+		GPIO.output(PIN, GPIO.LOW)
+		time.sleep(INTERVAL)
+		# LED on
+		GPIO.output(PIN, GPIO.HIGH)
+		time.sleep(INTERVAL)	
 except KeyboardInterrupt:
 	# exit the loop, if key interrupt
 	pass

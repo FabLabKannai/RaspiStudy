@@ -4,7 +4,7 @@
 http://fabble.cc/fablabkannai/rapsberryxpixxxlinux <br/>
 
 - What is Linux
-- Shell command
+- Linux command
 - Controll GPIO by shell
 
 ## Docs

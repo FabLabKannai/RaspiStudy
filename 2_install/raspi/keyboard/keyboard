@@ -1,0 +1,15 @@
+# KEYBOARD CONFIGURATION FILE
+# Japanese 109 Keyboard
+# 2016−04−10 K.OHWADA @ FabLab Kannai
+
+# Consult the keyboard(5) manual page.
+
+# XKBMODEL="pc105"
+# XKBLAYOUT="gb"
+XKBMODEL="OADG109A"
+XKBLAYOUT="jp"
+
+XKBVARIANT=""
+XKBOPTIONS=""
+
+BACKSPACE="guess"

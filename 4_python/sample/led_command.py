@@ -22,19 +22,22 @@ class Led():
 		GPIO.setmode(GPIO.BOARD)
 		GPIO.setup(self.pin, GPIO.OUT)
 		self.th = LedThread(self.pin)
-		self.th.start()
 
-	def cleanupGpio(self):
+	def finish(self):
+		self.th.stopRun()
 		GPIO.cleanup()
 
 	def command(self, c):
 		if c == 0:
+			# LED Off
 			self.th.stopBlink()
-			GPIO.output(self.pin, False)
+			GPIO.output(self.pin, GPIO.LOW)
 		elif c == 1:
+			# LED On
 			self.th.stopBlink()
-			GPIO.output(self.pin, True)
+			GPIO.output(self.pin, GPIO.HIGH)
 		elif c == 2:
+			# LED Blink
 			self.th.startBlink()
 
 # end of class
@@ -43,13 +46,18 @@ class Led():
 # LED Thread class for blink
 # 
 class LedThread(threading.Thread):
+	TIME_BLINK = 1.0  # 1 sec
+	TIME_SLEEP = 0.1 # 0.1 sec
+	MAX_CNT = int( TIME_BLINK / TIME_SLEEP )
 	pin = 0
+	is_run = True
 	is_blink = False
 	is_status = False
 
 	def __init__(self, pin):
 		super(LedThread, self).__init__()
 		self.pin = pin
+		self.start()
 
 	def startBlink(self):
 		self.is_blink = True
@@ -57,16 +65,19 @@ class LedThread(threading.Thread):
 	def stopBlink(self):
 		self.is_blink = False
 
-	# run always
+	def stopRun(self):
+		self.is_run = False
+
+	# run  when is_run is true
 	def run(self):
 		cnt = 0
-		while True:
+		while self.is_run:
 			cnt += 1
-			if cnt >= 10:
+			if cnt >= self.MAX_CNT:
 				# every one second
 				cnt = 0
 				self.blink()
-			time.sleep(0.1)
+			time.sleep(self.TIME_SLEEP)
 
 	# blink LED when is_blink is true
 	def blink(self):
@@ -92,8 +103,9 @@ try:
 except KeyboardInterrupt:
 	# exit the loop, if key interrupt
 	pass
+except:
+	# exit the loop, if except
+	pass
 
-# cleanup GPIO
-led.cleanupGpio()
-
+led.finish()
 # main end
