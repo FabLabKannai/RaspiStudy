@@ -11,10 +11,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/docs/connection_serial.png" width="300" /> <br/>
 
-## Tools
-Tools for Raspberry Pi <br/>
-
-### on Raspberry Pi
+## Tools on Raspberry Pi
 Tools for Raspberry Pi <br/>
 - expand_rootfs.sh <br/>
   Expand root filesystems to any size <br/>
@@ -23,7 +20,7 @@ Tools for Raspberry Pi <br/>
 - vncboot <br/>
   Script to start tightvncserver daemon <br/>
 
-### on MAC
+## Tools  on MAC
 Tools for Raspberry Pi  on MAC <br/>
 - backup_sd.py <br/>
   Backup SD card of Raspberry Pi. <br/>
