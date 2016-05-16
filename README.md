@@ -10,6 +10,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/2_install/docs/connection_serial.png" width="200" /> <br/>
 
 ## 3. Linux
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/3_linux/docs/raspi_led.jpg" width="200"> <br/>
 
 ## 4. Python
 
