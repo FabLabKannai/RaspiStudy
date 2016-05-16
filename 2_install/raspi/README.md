@@ -1,6 +1,6 @@
-# raspi tools - RaspiStudy
-Tools for Raspberry Pi
+# raspi tools - Install
 
+Tools for Raspberry Pi <br/>
 - expand_rootfs.sh <br/>
   Expand root filesystems to any size <br/>
 - keyboard <br/>
