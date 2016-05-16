@@ -8,3 +8,6 @@ Script to start tightvncserver daemon
 > $ sudo cp vncboot /etc/init.d/ <br/>
 > $ sudo chmod 755 /etc/init.d/vncboot <br/>
 > $ sudo update-rc.d vncboot defaults <br/>
+
+### Blog (Japanese)
+http://android.ohwada.jp/archives/6611

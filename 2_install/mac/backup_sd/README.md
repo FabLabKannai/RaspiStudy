@@ -9,3 +9,6 @@ Backup SD card of Raspberry Pi for MAC. <br/>
 > $ sudo python backup_sd.py <br/>
 
 Created img file named year, month, day, hour, minute and second
+
+### Blog (Japanese)
+http://android.ohwada.jp/archives/6609

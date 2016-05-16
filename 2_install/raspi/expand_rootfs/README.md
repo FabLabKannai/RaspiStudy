@@ -11,3 +11,6 @@ base on Expand Filesystems of raspi-config.  <br/>
 > $ sudo bash expand_rootfs.sh [your_size_GB] <br/>
 
 default size is 5GB <br/>
+
+### Blog (Japanese)
+http://android.ohwada.jp/archives/6602

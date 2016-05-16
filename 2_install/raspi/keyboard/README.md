@@ -8,3 +8,6 @@ Keyboard default file for Japanese 109 keyboard
 > $ sudo cp -p /etc/default/keyboard /etc/default/keyboard.orig <br/>
 > $ sudo cp keyboard /etc/default/ <br/>
 > $ sudo chmod 644 /etc/default/keyboard <br/>
+
+### Blog (Japanese)
+http://android.ohwada.jp/archives/6627
