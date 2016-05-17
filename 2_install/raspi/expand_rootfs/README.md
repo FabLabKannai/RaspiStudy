@@ -1,6 +1,6 @@
 # expand_rootfs.sh - raspi
 Expand root filesystems to any size. <br/>
-base on Expand Filesystems of raspi-config.  <br/>
+base on Expand Filesystems of [raspi-config](https://github.com/RPi-Distro/raspi-config).  <br/>
 
 ### Install
 > $ cd /tmp <br/>
