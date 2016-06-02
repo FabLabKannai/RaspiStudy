@@ -8,5 +8,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - Controll GPIO by Python
 
 ## Sample
-- LED Bllnk
-- LED Command
+- RPI LED Bllnk
+- WiringPi LED Bllnk
+- WiringPi LED Fade
+- WiringPi LED Command
