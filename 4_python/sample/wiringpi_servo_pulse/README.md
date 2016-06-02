@@ -17,5 +17,9 @@ example <br>
 - 300 : stop <br>
 - 400 : anticlockwide low speed <br>
 
+### Wiring
+The servo has three lines. <br/>
+Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin12 (GPIO18). <br/>
+
 ### Blog (Japanese)
 http://android.ohwada.jp/archives/6921

@@ -19,6 +19,10 @@ example <br>
 - 10 : anticlockwide low speed <br>
 - 100 : anticlockwide full speed <br>
 
+### Wiring
+The servo has three lines. <br/>
+Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin12 (GPIO18). <br/>
+
 ### 
 Servo Control Signal
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/servo_control_signal.png" width="200" /> <br/>

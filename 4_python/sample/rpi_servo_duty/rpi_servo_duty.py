@@ -33,7 +33,7 @@ class ServoDuty():
 # end of class
 
 # main
-PIN =15
+PIN =15 # GPIO22 
 servo = ServoDuty(PIN)
 
 try:

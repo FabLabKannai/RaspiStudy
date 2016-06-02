@@ -20,5 +20,9 @@ example <br>
 - 10 : anticlockwide low speed <br>
 - 100 : anticlockwide full speed <br>
 
+### Wiring
+The servo has three lines. <br/>
+Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin15 (GPIO22). <br/>
+
 ### Blog (Japanese)
 http://android.ohwada.jp/archives/6812
