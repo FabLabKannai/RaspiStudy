@@ -13,6 +13,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/3_linux/docs/raspi_led.jpg" width="200"> <br/>
 
 ## 4. Python
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
 ## 5. Web App
 

@@ -3,6 +3,7 @@
 Test for Continuous Rotation Servo  <br/>
 using WiringPi on Rapberry Pi <br/>
 Command specify speed <br>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
 ### Usage
 format : digits <br>

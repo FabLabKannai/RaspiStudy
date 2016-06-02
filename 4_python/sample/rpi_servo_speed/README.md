@@ -3,13 +3,13 @@
 Test for Continuous Rotation Servo <br/>
 using RPi.GPIO on Rapberry Pi <br/>
 Command specify speed <br>
-<img src="https://github.com/FabLabKannai/SumobotJr/blob/master/docs/raspi/raspi_servo.jpg" width="300" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
 ### Install & Run
 $ cd /tmp <br>
-$ git clone https://github.com/FabLabKannai/SumobotJr.git  <br>
-$ cd SumobotJr/raspi/servo_speed/ <br>
-$ sudo python servo_speed.py <br>
+$ git clone https://github.com/FabLabKannai/RaspiStudy.git  <br>
+$ cd RaspiStudy/4_python/sample/rpi_servo_speed/ <br>
+$ sudo python rpi_servo_speed.py <br>
 
 ### Usage
 format : digits <br>

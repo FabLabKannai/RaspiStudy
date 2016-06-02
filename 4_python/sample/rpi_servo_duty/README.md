@@ -3,7 +3,7 @@
 Test for Continuous Rotation Servo <br/>
 using RPi.GPIO on Rapberry Pi <br/>
 Command specify duty <br>
-<img src="https://github.com/FabLabKannai/SumobotJr/blob/master/docs/raspi/raspi_servo.jpg" width="300" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
 ### Usage
 format : digits <br>
