@@ -5,6 +5,11 @@ using WiringPi on Rapberry Pi <br/>
 Command specify pulse <br>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
+### Install
+> $ sudo apt-get install python-dev
+> $ sudo apt-get install wiringpi
+> $ sudo pip install wiringpi2
+
 ### Usage
 format : digits <br>
 example <br>
