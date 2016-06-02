@@ -3,9 +3,9 @@
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_led.jpg" width="300" />
 
 ### Install
-> $ sudo apt-get install python-dev
-> $ sudo apt-get install wiringpi
-> $ sudo pip install wiringpi2
+> $ sudo apt-get install python-dev <br/>
+> $ sudo apt-get install wiringpi <br/>
+> $ sudo pip install wiringpi2 <br/>
 
 ### Sample
 - RPI LED Bllnk <br>

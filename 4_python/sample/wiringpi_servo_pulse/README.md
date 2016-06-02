@@ -6,9 +6,9 @@ Command specify pulse <br>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
 ### Install
-> $ sudo apt-get install python-dev
-> $ sudo apt-get install wiringpi
-> $ sudo pip install wiringpi2
+> $ sudo apt-get install python-dev <br/>
+> $ sudo apt-get install wiringpi <br/>
+> $ sudo pip install wiringpi2 <br/>
 
 ### Usage
 format : digits <br>
