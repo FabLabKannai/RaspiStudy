@@ -23,14 +23,14 @@ example <br>
 The servo has three lines. <br/>
 Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin12 (GPIO18). <br/>
 
-### 
-Servo Control Signal
+### Servo Control Signal
+Servo Control Signal <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/servo_control_signal.png" width="200" /> <br/>
 
-PWM Cycle 20ms
+PWM Cycle 20ms <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/wiringpi_pwm_cycle_20ms.png" width="200" /> <br/>
 
-PWM Pluse Width 1.5ms
+PWM Pluse Width 1.5ms <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/wiringpi_pwm_width_1_5ms.png" width="200" /> <br/>
 
 ### Blog (Japanese)
