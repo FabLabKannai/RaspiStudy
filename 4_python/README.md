@@ -8,7 +8,7 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - Controll GPIO by Python
 
 ## Docs
-History of Programming Language
+- History of Programming Language
 
 ## Sample
 - RPI LED Bllnk
