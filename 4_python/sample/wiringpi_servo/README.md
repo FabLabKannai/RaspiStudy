@@ -40,10 +40,6 @@ example <br/>
 > $ sudo apt-get install wiringpi <br/>
 > $ sudo pip install wiringpi2 <br/>
 
-### Wiring
-The servo has three lines. <br/>
-Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin32 (GPIO12). <br/>
-
 ### Setting of WiringPi
 - pinMode  <br/>
 Set PWM_OUTPUT in pin mode  <br/>
@@ -64,9 +60,13 @@ the number is 400,  PWM cycle is 20ms .   <br/>
 20ms / 5μs = 4000  <br/>
 
 - pwmWrite  <br/>
-Set the number of clocks to be a pulse width .
-The number is 300, when pulse width is 1.5ms.
-1.5ms / 5μs = 300
+Set the number of clocks to be a pulse width . <br/>
+The number is 300, when pulse width is 1.5ms. <br/>
+1.5ms / 5μs = 300 <br/>
+
+### Wiring
+The servo has three lines. <br/>
+Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin32 (GPIO12). <br/>
 
 ### Blog (Japanese)
 http://android.ohwada.jp/archives/6921
