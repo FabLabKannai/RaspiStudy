@@ -5,22 +5,22 @@
 ### Hello
 - hello.py
 
-### calendar
+### Calendar
 - cal1.py
 
-### LED
+### GPIO LED
 - RPI LED Bllnk
 - RPI LED Fade
 - RPI LED Command
 
-### Button
+### GPIO Button
 - RPI Button Read
 - RPI Button LED
 - RPI Button Camera
 - RPI Button Music
 - RPI Button Poweroff
 
-### Servo
+### GPIO Servo
 - RPI Servo Duty
 - RPI Servo Speed
 

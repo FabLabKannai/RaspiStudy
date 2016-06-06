@@ -1,8 +1,8 @@
-#! /usr/bin/env python
-# Test for Continuous Rotation Servo
+#!/usr/bin/python
+# Python Sample
+#   Test for Continuous Rotation Servo
+#   command specify speed : -100 - 0 - 100
 # 2016-05-01 K.OHWADA @ FabLab Kannai
-# command
-#   speed : -100 - 0 - 100
 
 import RPi.GPIO as GPIO
 

@@ -11,9 +11,11 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - History of Programming Language
 
 ## Sample
-- RPI LED Bllnk
-- WiringPi LED Bllnk
-- WiringPi LED Fade
-- WiringPi LED Command
+- Hello
+- Calendar
+- GPIO LED
+- GPIO Button
+- GPIO Servo
+- Wiring Pi
 
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>

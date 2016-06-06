@@ -1,8 +1,8 @@
-#! /usr/bin/env python
-# Test for Continuous Rotation Servo
+#!/usr/bin/python
+# Python Sample
+#   Test for Continuous Rotation Servo
+#   command specify duty : 5 - 7.5 - 10
 # 2016-05-01 K.OHWADA @ FabLab Kannai
-# command
-#   duty : 5 - 7.5 - 10
 
 import RPi.GPIO as GPIO
 
