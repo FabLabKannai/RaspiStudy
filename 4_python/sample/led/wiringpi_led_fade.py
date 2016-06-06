@@ -1,17 +1,13 @@
+#!/usr/bin/python
 # Python Sample: LED fade
-# 2016-05-30 K.OHWADA @ FabLab Kannai
-
-# requirement
-# sudo apt-get install wiringpi
-# sudo pip install wiringpi2
+# 2016-06-01 K.OHWADA @ FabLab Kannai
 
 import wiringpi as gpio
 import time
 
 # main
-# pwm pin 12 or 18, and 13 or 19
-PIN = 19
-INTERVAL = 0.05
+PIN = 18 # con-pin 12
+INTERVAL = 0.05 # 0.05 sec
 MIN_BRIGHTNESS = 0
 MAX_BRIGHTNESS = 1023
 
@@ -25,7 +21,7 @@ try:
 	while True:
 		print bright
 		gpio.pwmWrite(PIN, bright)
-		bright = bright + amount;
+		bright = bright + amount
 		if bright <= MIN_BRIGHTNESS:
 			bright = MIN_BRIGHTNESS
 			amount = -amount

@@ -1,27 +1,26 @@
+#!/usr/bin/python
 # Python Sample: LED Blink
-# 2016-05-30 K.OHWADA @ FabLab Kannai
-
-# requirement
-# sudo apt-get install wiringpi
-# sudo pip install wiringpi2
+# 2016-06-01 K.OHWADA @ FabLab Kannai
 
 import wiringpi
 import time
 
 # main
-PIN = 17
-INTERVAL = 1
+PIN = 17 # con-pin 11
+INTERVAL = 1 # 1 sec
 wiringpi.wiringPiSetupGpio()
 wiringpi.pinMode(PIN, wiringpi.OUTPUT)
 
 try:
 	# endless loop
 	while True:
-		print("LED On")
+		# LED off
+		print "LED Off"
+		wiringpi.digitalWrite(PIN, wiringpi.LOW) 
+		time.sleep(INTERVAL) 
+		# LED on 
+		print "LED On"
 		wiringpi.digitalWrite(PIN, wiringpi.HIGH)                 
-		time.sleep(INTERVAL)
-		print("LED Off")
-		wiringpi.digitalWrite(PIN, wiringpi.LOW)            
 		time.sleep(INTERVAL)
 except KeyboardInterrupt:
 	# exit the loop, if key interrupt
