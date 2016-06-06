@@ -14,6 +14,16 @@ example <br>
 - 300 : stop <br>
 - 400 : anticlockwide low speed <br>
 
+**Contorl Signal**  <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/servo_control_signal.png" width="200" />
+
+**Result**  <br/>
+- cycle 20ms <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/wiringpi_pwm_cycle_20ms.png" width="200" />
+- Servo stop in pluse 300 <br/>
+Pulse width is 1.5 msec <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/wiringpi_pwm_width_1_5ms.png" width="200" />
+
 ## WiringPi Servo Speed
 Command specify speed <br/>
 
