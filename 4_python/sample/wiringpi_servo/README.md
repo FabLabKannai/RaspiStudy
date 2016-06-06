@@ -1,21 +1,21 @@
-# servo  - RasPi Python sample
+# WiringPi Servo  - RasPi Python sample
 
 Test for Continuous Rotation Servo <br/>
-using RPi.GPIO on Rapberry Pi <br/>
+using WiringPi on Rapberry Pi <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/raspi_servo.jpg" width="300" /> <br/>
 
-## RPI Servo Duty
-command specify duty cycle <br/>
+## WiringPi Servo Pulse
+Command specify pulse <br/>
 
 **Usage**  <br/>
 format : digits <br/>
-example <br/>
-- 5.0 : clockwide full speed <br/>
-- 7.5 : stop <br/>
-- 1.0 : anticlockwide low speed <br/>
+example <br>
+- 200 : clockwide full speed <br>
+- 300 : stop <br>
+- 400 : anticlockwide low speed <br>
 
-## RPI Servo Speed
-command specify speed <br/>
+## WiringPi Servo Speed
+Command specify speed <br/>
 
 **Usage**  <br/>
 format : digits <br/>
@@ -24,10 +24,15 @@ example <br/>
 - 0 : stop <br/>
 - 100 : anticlockwide full speed <br/>
 
+### Install wiringpi
+> $ sudo apt-get update <br/>
+> $ sudo apt-get install python-dev <br/>
+> $ sudo apt-get install wiringpi <br/>
+> $ sudo pip install wiringpi2 <br/>
+
 ### Wiring
 The servo has three lines. <br/>
 Connect red line to Pin4 (+ 5v), black line to Pin6 (GND), and white line to Pin32 (GPIO12). <br/>
 
 ### Blog (Japanese)
-- http://android.ohwada.jp/archives/6778
-- http://android.ohwada.jp/archives/6812
+http://android.ohwada.jp/archives/6921

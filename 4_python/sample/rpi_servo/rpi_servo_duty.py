@@ -18,7 +18,7 @@ class ServoDuty():
 	servo = None
 
 	def __init__(self, pin):
-		GPIO.setmode(GPIO.BOARD)
+		GPIO.setmode(GPIO.BCM)
 		GPIO.setup(pin, GPIO.OUT)
 		self.servo = GPIO.PWM(pin, 50) # 50 Hz (20 ms)
 		self.servo.start(7.5)
@@ -33,7 +33,7 @@ class ServoDuty():
 # end of class
 
 # main
-PIN =15 # GPIO22 
+PIN = 12 # con-pin 32
 servo = ServoDuty(PIN)
 
 try:
@@ -41,8 +41,6 @@ try:
 	while True:
 		# wait to enter command
 		duty = input('> ')
-		# exit the loop, if duty is invalid
-		if duty > 10: break
 		servo.change(duty)
 except KeyboardInterrupt:
 	# exit the loop, if key Interrupt

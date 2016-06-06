@@ -27,7 +27,7 @@ class ServoSpeed():
 	dutyOffset = 0
 
 	def __init__(self, pin):
-		GPIO.setmode(GPIO.BOARD)
+		GPIO.setmode(GPIO.BCM)
 		self.pin = int(pin)
 		GPIO.setup(self.pin, GPIO.OUT)
 
@@ -68,7 +68,7 @@ class ServoSpeed():
 
 # main
 print "start ServoSpeed"
-PIN =15 # GPIO22 
+PIN = 12 # con-pin 32
 OFFSET = -18.0
 DEBUG = False
 servo = ServoSpeed(PIN)
@@ -81,8 +81,6 @@ try:
 	while True:
 		# wait to enter command
 		speed = input('> ')
-		# exit the loop, if speed is invalid
-		if speed > 100: break
 		servo.change(speed)
 except KeyboardInterrupt:
 	# exit the loop, if key Interrupt

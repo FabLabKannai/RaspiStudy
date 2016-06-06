@@ -1,5 +1,6 @@
 #!/usr/bin/python
-# Python Sample: LED fade
+# Python Sample
+#   LED fade : brighter LED, and darker LED gradually
 # 2016-06-01 K.OHWADA @ FabLab Kannai
 
 import wiringpi as gpio

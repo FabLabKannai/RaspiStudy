@@ -1,5 +1,6 @@
 #!/usr/bin/python
-# Python Sample: LED Blink
+# Python Sample
+#   LED Blink : turn LED on and LED off repeatedly 
 # 2016-06-01 K.OHWADA @ FabLab Kannai
 
 import wiringpi

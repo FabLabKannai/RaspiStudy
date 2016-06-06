@@ -1,8 +1,8 @@
 #! /usr/bin/env python
-# Test for Continuous Rotation Servo
+# Python Sample
+#   Test for Continuous Rotation Servo
+#   command specify speed : -100 - 0 - 100
 # 2016-05-30 K.OHWADA @ FabLab Kannai
-# command
-#   speed : -100 - 0 - 100
 
 import wiringpi
 
@@ -76,7 +76,7 @@ class ServoSpeed():
 
 # main
 print "start ServoSpeed"
-PIN = 18
+PIN = 12 # con-pin 32
 DEBUG = False
 servo = ServoSpeed(PIN)
 servo.setDebugPrint(DEBUG)
@@ -90,8 +90,6 @@ try:
 	while True:
 		# wait to enter command
 		speed = input('> ')
-		# exit the loop, if speed is invalid
-		if speed > 100: break
 		servo.change(speed)
 except KeyboardInterrupt:
 	# exit the loop, if key Interrupt

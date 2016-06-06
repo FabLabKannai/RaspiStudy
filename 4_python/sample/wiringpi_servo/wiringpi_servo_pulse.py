@@ -1,8 +1,8 @@
 #! /usr/bin/env python
-# Test for Continuous Rotation Servo
+# Python Sample
+#   Test for Continuous Rotation Servo
+#   command specify pulse : 200 - 300 - 400
 # 2016-05-30 K.OHWADA @ FabLab Kannai
-# command
-#   pulse : 200 - 300 - 400
 
 import wiringpi
 
@@ -47,7 +47,7 @@ class ServoPulse():
 
 # main
 print "start ServoPulse"
-PIN = 18
+PIN = 12 # con-pin 32
 servo = ServoPulse(PIN)
 servo.setupGpio()
 servo.setPinMode()
@@ -58,8 +58,6 @@ try:
 	while True:
 		# wait to enter command
 		pulse = input('> ')
-		# exit the loop, if speed is invalid
-		if pulse > 400: break
 		servo.change(pulse)
 except KeyboardInterrupt:
 	# exit the loop, if key Interrupt

@@ -1,11 +1,11 @@
 #!/usr/bin/python
 # Python Sample
 #   command specify LED on, off, blink
-# 2016-05-01 K.OHWADA @ FabLab Kannai
+# 2016-06-01 K.OHWADA @ FabLab Kannai
 
 import time
 import threading
-import RPi.GPIO as GPIO
+import wiringpi
 
 #
 # LedController
@@ -24,25 +24,24 @@ class LedController():
 		self.led_th = LedThread(self.pin)
 
 	def start(self):
-		GPIO.setmode(GPIO.BCM)
-		GPIO.setup(self.pin, GPIO.OUT)
+		wiringpi.wiringPiSetupGpio()
+		wiringpi.pinMode(self.pin, wiringpi.OUTPUT)
 		self.led_th.startRun()
 
 	def stop(self):
 		self.led_th.stopRun()
-		GPIO.cleanup()
 
 	def command(self, c):
 		if c == '0':
 			# LED off
 			print 'LED off'
 			self.led_th.stopBlink()
-			GPIO.output(self.pin, GPIO.LOW)
+			wiringpi.digitalWrite(self.pin, wiringpi.LOW) 
 		elif c == '1':			
 			# LED on
 			print 'LED on'
 			self.led_th.stopBlink()
-			GPIO.output(self.pin, GPIO.HIGH)
+			wiringpi.digitalWrite(self.pin, wiringpi.HIGH) 
 		elif c == '2':
 			# LED blink
 			print 'LED blink'
@@ -94,7 +93,7 @@ class LedThread(threading.Thread):
 	def blink(self):
 		if self.is_blink:
 			self.is_status = not self.is_status
-			GPIO.output(self.pin, self.is_status)
+			wiringpi.digitalWrite(self.pin, self.is_status)
 
 # end of class
 
