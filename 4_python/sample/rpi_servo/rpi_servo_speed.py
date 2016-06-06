@@ -12,7 +12,7 @@ import RPi.GPIO as GPIO
 # spped
 #   -100 : clockwide full speed
 #   0 : stop
-#   100 : anticlockwide low speed
+#   100 : anticlockwide full speed
 #
 class ServoSpeed():
 	FREQ = 50 # 50 Hz (20 ms)

@@ -12,7 +12,7 @@ import RPi.GPIO as GPIO
 # duty
 #   5.0 : clockwide full speed
 #   7.5 : stop
-#   1.0 : anticlockwide low speed
+#   1.0 : anticlockwide full speed
 #
 class ServoDuty():
 	servo = None

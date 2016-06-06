@@ -12,7 +12,7 @@ format : digits <br/>
 example <br/>
 - 5.0 : clockwide full speed <br/>
 - 7.5 : stop <br/>
-- 1.0 : anticlockwide low speed <br/>
+- 1.0 : anticlockwide full speed <br/>
 
 **Contorl Signal**  <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/servo_control_signal.png" width="200" />
@@ -21,7 +21,7 @@ example <br/>
 - cycle 20ms <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/rpi_pwm_cycle_20ms.png" width="200" />
 - Servo did not stop in duty 7.5, and is rotating at a very slow. <br/>
-Pulse width is about 1.6 msec, expect is 1.5 msec, with oscilloscope <br/>
+Pulse width is about 1.6 msec, but expect value is 1.5 msec <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/rpi_pwm_duty_7_5.png" width="200" />
 - Servo stop about duty 7.2. <br/>
 But pulse has the jitter. <br/>

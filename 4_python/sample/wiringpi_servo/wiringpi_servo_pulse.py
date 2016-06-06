@@ -12,7 +12,7 @@ import wiringpi
 # spped
 #   200 : clockwide full speed
 #   300 : stop
-#   400 : anticlockwide low speed
+#   400 : anticlockwide full speed
 #
 class ServoPulse():
 	# PWM base clock 19.2 MHz

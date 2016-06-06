@@ -12,7 +12,7 @@ format : digits <br/>
 example <br>
 - 200 : clockwide full speed <br>
 - 300 : stop <br>
-- 400 : anticlockwide low speed <br>
+- 400 : anticlockwide full speed <br>
 
 **Contorl Signal**  <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/servo_control_signal.png" width="200" />
