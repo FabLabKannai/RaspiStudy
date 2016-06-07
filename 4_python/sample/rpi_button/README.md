@@ -15,6 +15,7 @@ put the LED and 330 ohm resistor in series between pin 11 (GPIO 17) and pin 6 (G
 
 ### RPI Button Camera
 take a picture when press the button with USB camera using fswebcam <br/>
+USB camera [Buffalo BSW20KM15](http://buffalo.jp/product/multimedia/web-camera/bsw20km15/) needs to be specified resolution 1600x1200  <br/>
 
 **Install fswebcam** <br/>
 > $ sudo apt-get update <br/>
