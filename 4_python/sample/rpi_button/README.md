@@ -5,7 +5,7 @@ read the status of the button <br/>
 
 **Wiring** <br/>
 put the Button  between pin 13 (GPIO 27) and pin 1 (3.3V) <br/>
-and put 10 kilo ohm resistor between pin 13 (GPIO 27) and pin 9 (GND3) <br/>
+and put 10 kilo ohm resistor between pin 13 (GPIO 27) and pin 9 (GND) <br/>
 
 ### RPI Button LED
 turns on the LED when press the button <br/>

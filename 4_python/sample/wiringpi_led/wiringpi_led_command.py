@@ -57,31 +57,31 @@ class LedThread(threading.Thread):
 	TIME_SLEEP = 0.1 # 0.1 sec
 	MAX_CNT = int( TIME_BLINK / TIME_SLEEP )
 	pin = 0
-	is_run = False
-	is_blink = False
-	is_status = False
+	isRun = False
+	isBlink = False
+	isStatus = False
 
 	def __init__(self, pin):
 		super(LedThread, self).__init__()
 		self.pin = pin
 
 	def startRun(self):
-		self.is_run = True
+		self.isRun = True
 		self.start()
 	
 	def stopRun(self):
-		self.is_run = False
+		self.isRun = False
 		
 	def startBlink(self):
-		self.is_blink = True
+		self.isBlink = True
 
 	def stopBlink(self):
-		self.is_blink = False
+		self.isBlink = False
 
-	# run when is_run is true
+	# run when isRun is true
 	def run(self):
 		cnt = 0
-		while self.is_run:
+		while self.isRun:
 			cnt += 1
 			if cnt >= self.MAX_CNT:
 				# every one second
@@ -89,11 +89,11 @@ class LedThread(threading.Thread):
 				self.blink()
 			time.sleep(self.TIME_SLEEP)
 
-	# blink LED when is_blink is true
+	# blink LED when isBlink is true
 	def blink(self):
-		if self.is_blink:
-			self.is_status = not self.is_status
-			wiringpi.digitalWrite(self.pin, self.is_status)
+		if self.isBlink:
+			self.isStatus = not self.isStatus
+			wiringpi.digitalWrite(self.pin, self.isStatus)
 
 # end of class
 

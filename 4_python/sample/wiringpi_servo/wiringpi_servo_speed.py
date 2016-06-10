@@ -25,18 +25,18 @@ class ServoSpeed():
 	STOP_SPEED = 0
 	MAX_SPEED = 100
 	pin = 0
-	debugPrint = False
+	isDebugPrint = False
 	pulseOffset = 0
-	
+
 	def __init__(self, pin):
 		self.pin = int(pin)
 
 	def setDebugPrint(self, debug):
-		self.debugPrint = bool(debug)
+		self.isDebugPrint = bool(debug)
 
 	def setOffset(self, offset):
 		self.pulseOffset = self.COEF * float(offset)
-		if self.debugPrint: 
+		if self.isDebugPrint: 
 			print "offset; " + str(offset) + " -> " + str(self.pulseOffset)
 
 	def setupGpio(self):
@@ -68,7 +68,7 @@ class ServoSpeed():
 		if speed < self.MIN_SPEED: speed = self.MIN_SPEED
 		if speed > self.MAX_SPEED: speed = self.MAX_SPEED
 		pulse = int( self.PULSE_STOP + self.pulseOffset + self.COEF * speed )
-		if self.debugPrint: 
+		if self.isDebugPrint: 
 			print str(speed) + " -> " + str(pulse)
 		return pulse
 
