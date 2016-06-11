@@ -6,6 +6,7 @@ read the status of the button <br/>
 **Wiring** <br/>
 put the Button  between pin 13 (GPIO 27) and pin 1 (3.3V) <br/>
 and put 10 kilo ohm resistor between pin 13 (GPIO 27) and pin 9 (GND) <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/4_python/docs/button_circuit.png" width="300" /> <br/>
 
 ### RPI Button LED
 turns on the LED when press the button <br/>
@@ -14,7 +15,8 @@ turns on the LED when press the button <br/>
 put the LED and 330 ohm resistor in series between pin 11 (GPIO 17) and pin 6 (GND) <br/>
 
 ### RPI Button Camera
-take a picture when press the button with USB camera using fswebcam <br/>
+take a picture using fswebcam when press the button with USB camera  <br/>
+[Raspberry Pi - Using a Standard USB Webcam](https://www.raspberrypi.org/documentation/usage/webcams/) <br/>
 USB camera [Buffalo BSW20KM15](http://buffalo.jp/product/multimedia/web-camera/bsw20km15/) needs to be specified resolution 1600x1200  <br/>
 
 **Install fswebcam** <br/>
@@ -25,7 +27,8 @@ USB camera [Buffalo BSW20KM15](http://buffalo.jp/product/multimedia/web-camera/b
 connect USB camera to USB port <br/>
 
 ### RPI Button Music
-play music when press the button using mpg321 <br/>
+play music using mpg321 when press the button <br/>
+[mpg321 - a simple and lightweight command line MP3 player](http://mpg321.sourceforge.net/) <br/>
 
 **Install mpg321** <br/>
 > $ sudo apt-get update <br/>
