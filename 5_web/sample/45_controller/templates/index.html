@@ -1,25 +1,39 @@
-<html>
+<!DOCTYPE html>
 <!-- 2016-05-01 K.OHWADA @ FabLab Kannai -->
+<html>
 <head>
-<title>LED Controller</title>
-<link rel="stylesheet" type="text/css" href="/static/style.css" />
-<script type="text/javascript" src="/static/jquery.min.js"></script>
-<script type="text/javascript">
-// post method
-function post(val){
-	var data = {
-		"led": val
-	};
-	$.post("/action", data);
-}
-</script>
+<title>GPIO Controller</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<!-- jQuery UI -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/jquery-ui.min.js"></script>
+<script src="/static/js/jquery.ui.touch-punch.min.js"></script>
+<script src="/static/js/controller.js"></script>
+<!-- stylesheet -->
+<link rel="stylesheet" href="/static/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="/static/css/style.css" />
 </head>
-<body>
-<h1>LED Controller</h1>
-<!-- post begin -->
-<button type="button" class="off" onClick="post(0);">Off</button> &nbsp;
-<button type="button" class="on" onClick="post(1);">On</button> &nbsp;
-<button type="button" class="blink" onClick="post(2);">Blink</button>
-<!-- post end -->
+<body id="body">
+<h1>GPIO Controller</h1>
+<h3>LED</h3>
+<div align="center">
+	<button type="button" id="led_off" onClick="postLed(0);">LED Off</button> &nbsp;
+	<button type="button" id="led_on" onClick="postLed(1);">LED On</button> &nbsp;
+	<button type="button" id="led_blink" onClick="postLed(2);">LED Blink</button>
+</div>
+
+<h3>Button</h3>
+<div align="center">
+    <div id="button_status">---</div>
+</div>
+
+<h3>Servo</h3>
+<div align="center">
+    <div id="servo_value"></div>
+    <div id="servo_silder"></div>
+    <button type="button" id="servo_stop" onClick="stopServo();">Stop Servo</button>
+</div>
+
 </body>
 </html>
