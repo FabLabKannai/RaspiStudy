@@ -33,4 +33,4 @@ http://fabble.cc/fablabkannai/raspberryxpixxxx <br/>
 - 45 LED controller
 - 46 LED daemon
 
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/46_led_daemon.png" width="200" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/46_daemon.png" width="200" /> <br/>
