@@ -246,7 +246,6 @@ DEBUG = False
 app = Flask(__name__)
 # start GPIO
 gpio = GpioController(PIN_LED, PIN_BUTTON, PIN_SERVO)
-#gpio.start()
 
 # route index
 @app.route('/')

@@ -14,7 +14,7 @@ import gpio_setuptools
 # Requirements for our application
 INSTALL_REQUIRES = [
    "flask>=0.10",
-   "RPi.GPIO>=0.6.2"
+   "wiringpi>=2.32.1"
 ]
 
 # Additional requirements for setup
