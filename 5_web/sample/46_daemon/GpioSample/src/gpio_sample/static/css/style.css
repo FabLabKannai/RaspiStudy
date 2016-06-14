@@ -14,14 +14,14 @@
     font-size: 120%;
     font-weight: bold;
     padding: 10px 15px;
-    color: #000000;  // black
+    color: #0000ff;  // blue
 }
 
 #gpio_quit {
     font-size: 120%;
     font-weight: bold;
     padding: 10px 15px;
-    color: #888888;  // gray
+    color: #ff0000;  // red
 }
 
 #led_off {

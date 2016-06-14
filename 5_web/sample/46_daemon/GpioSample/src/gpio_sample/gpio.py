@@ -23,6 +23,7 @@ class GpioController():
 	BUTTON_OFF = 0
 	BUTTON_ON = 1	
 	ledThread = None	
+	servo = None	
 	pinLed = 0
 	pinButton = 0
 	isRun = False

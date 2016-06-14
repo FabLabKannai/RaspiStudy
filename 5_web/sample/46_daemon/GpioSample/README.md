@@ -27,7 +27,7 @@ $ virtualenv venv <br/>
 $ source venv/bin/activate <br/>
 (venv) $ cd GpioSample <br/>
 (venv) $ python setup.py install <br/>
-$ deactivate <br/>
+(venv) $ deactivate <br/>
 
 you can use service daemon <br/>
 $ sudo sh init.sh <br/>
@@ -40,4 +40,5 @@ or service daemon <br/>
 $ sudo /etc/init.d/gpio-sample start <br/>
 
 ### Usage
+Access using web browser. <br/>
 http://rasoberrypi.local:5010/ <br/>

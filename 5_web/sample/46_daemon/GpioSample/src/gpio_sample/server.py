@@ -34,7 +34,7 @@ def status():
 	if request.method == 'GET':
 		ret = do_get()
 	return ret
-	
+
 # do post method
 # get parameter, and control LED or Servo
 def do_post():
