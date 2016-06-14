@@ -23,7 +23,7 @@
 - 42 static template
 - 43 dynamic template
 - 44 jQuery
-- 45 LED controller
-- 46 LED daemon
+- 45 GPIO controller
+- 46 GPIO daemon
 
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/46_daemon.png" width="200" /> <br/>

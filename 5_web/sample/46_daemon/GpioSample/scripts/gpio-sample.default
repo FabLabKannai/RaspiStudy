@@ -4,21 +4,23 @@
 # The init.d script will only run if this variable non-empty.
 LED_USER=root
 
-# On what host to run daemon, default is 0.0.0.0
+# On what host to run daemon
 HOST="0.0.0.0"
 
-# On what port to run daemon, default is 5010
+# On what port to run daemon
 PORT=5010
 
-# On what LED pin to run daemon, default is 11
-PIN_LED=11
+# On what pins to run daemon
+PIN_LED=17
+PIN_BUTTON=27
+PIN_SERVO=12 
 
 # Path to the OctoPrint executable, use this to override the default setting "/usr/bin/led-sample"
 #DAEMON=/path/to/led-sample/executable
-DAEMON=/home/pi/RaspiStudy/venv/bin/led_sample
+DAEMON=/home/pi/RaspiStudy/venv/bin/gpio_sample
 
 # What arguments to pass to led-sample, usually no need to touch this
-DAEMON_ARGS="--host=$HOST --port=$PORT --pin=$PIN_LED"
+DAEMON_ARGS="--host=$HOST --port=$PORT --pin_led=$PIN_LED --pin_button=$PIN_BUTTON --pin_servo=$PIN_SERVO"
 
 # Umask of files led-sample generates, Change this to 000 if running led-sample as its own, separate user
 UMASK=022

@@ -1,5 +1,5 @@
 #!/usr/bin/python
-# LED setup
+# GPIO setup
 # 2016-05-01 K.OHWADA @ FabLab Kannai
 
 from setuptools import setup, find_packages
@@ -7,7 +7,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.realpath(__file__)),"src"))
-import led_setuptools
+import gpio_setuptools
 
 #-----------------------------------------------------------------------------------------------------------------------
 
@@ -28,9 +28,9 @@ EXTRA_REQUIRES = dict()
 
 # general setup configuration
 def params():
-    name ="LedSample"
+    name ="GpioSample"
     version ="0.1"
-    description ="Led Controller for Raspberry Pi 2"
+    description ="GPIO Controller for Raspberry Pi 2"
 
     install_requires = INSTALL_REQUIRES
     extras_require = EXTRA_REQUIRES
@@ -66,7 +66,7 @@ def params():
        "":"src"
     }
     package_data = {
-       "led_sample": led_setuptools.package_data_dirs("src/led_sample", ["static", "templates"])
+       "gpio_sample": gpio_setuptools.package_data_dirs("src/gpio_sample", ["static", "templates"])
     }
 
     include_package_data = True
@@ -80,7 +80,7 @@ def params():
 
     entry_points = {
         "console_scripts": [
-            "led_sample = led_sample:main"
+            "gpio_sample = gpio_sample:main"
         ]
     }
 

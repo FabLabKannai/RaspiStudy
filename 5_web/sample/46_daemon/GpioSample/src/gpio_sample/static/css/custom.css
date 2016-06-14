@@ -1,0 +1,10 @@
+/* 
+ * custom.css
+ * 2016-05-01 K.OHWADA @ FabLab Kannai
+ */
+
+.ui-slider .ui-slider-handle {
+	width: 30px;
+    height: 30px;
+    background-color:#ddffdd;
+}

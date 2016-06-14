@@ -1,8 +1,6 @@
-#!/usr/bin/python
-# Flask sample : LED Controller
+# GPIO command
 # 2016-05-01 K.OHWADA @ FabLab Kannai
 
-from flask import Flask, render_template, request
 import threading
 import time
 import wiringpi
@@ -29,8 +27,11 @@ class GpioController():
 	pinButton = 0
 	isRun = False
 	isFirst = True
-	
-	def __init__(self, pin_led, pin_button, pin_servo):
+
+	def __init__(self):
+		pass
+
+	def setPin(self, pin_led, pin_button, pin_servo):
 		self.pinLed = int(pin_led)
 		self.pinButton = int(pin_button)
 		self.servo = ServoSpeed(pin_servo)
@@ -235,58 +236,3 @@ class ServoSpeed():
 		return pulse
 
 # end of class
-
-# constant
-PIN_LED = 17 # con-pin 11
-PIN_BUTTON = 27 # con-pin 13
-PIN_SERVO = 12 # con-pin 32
-DEBUG = False
-
-# Flask start	
-app = Flask(__name__)
-# start GPIO
-gpio = GpioController(PIN_LED, PIN_BUTTON, PIN_SERVO)
-#gpio.start()
-
-# route index
-@app.route('/')
-def show_index():
-	return render_template('index.html')
-
-# route action with post
-@app.route('/action', methods=['POST'])
-def action():
-	if request.method == 'POST':
-		do_post()
-	return ''
-
-# route status with get
-@app.route('/status', methods=['GET'])
-def status():
-	ret = ''
-	if request.method == 'GET':
-		ret = do_get()
-	return ret
-
-# do post method
-# get parameter, and control LED or Servo
-def do_post():
-	type = str(request.form['type'])
-	val = str(request.form['value'])
-    	if type == 'gpio':
-    		gpio.commandGpio(val)
-	elif type == 'servo':
-    		gpio.commandServo(val)
-
-# do get method
-# return button status
-def do_get():
-	status = gpio.getButtonStatus()
-	json = "{\"status\":%d}" %(status)
-	return json
-
-# Flask end
-
-# main
-if __name__ == '__main__':
-    app.run(host="0.0.0.0")

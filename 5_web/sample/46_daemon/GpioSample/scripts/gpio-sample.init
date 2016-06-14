@@ -2,30 +2,30 @@
 # 2016-05-01 K.OHWADA @ FabLab Kannai
 
 ### BEGIN INIT INFO
-# Provides:          led-sample
+# Provides:          gpio-sample
 # Required-Start:    $local_fs networking
 # Required-Stop:
 # Should-Start:
 # Should-Stop:
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: LED daemon
-# Description:       Starts the LED daemon with the user specified in
-#                    /etc/default/led-sample.
+# Short-Description: GPIO daemon
+# Description:       Starts the GPIO daemon with the user specified in
+#                    /etc/default/gpio-sample.
 ### END INIT INFO
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DESC="LED Daemon"
-NAME="LED Sample"
-#DAEMON=/usr/local/bin/led-sample
-PIDFILE=/var/run/led-sample.pid
-PKGNAME=led-sample
+DESC="GPIO Daemon"
+NAME="GPIO Sample"
+#DAEMON=/usr/local/bin/gpio-sample
+PIDFILE=/var/run/gpio-sample.pid
+PKGNAME=gpio-sample
 SCRIPTNAME=/etc/init.d/$PKGNAME
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$PKGNAME ] && . /etc/default/$PKGNAME
 
-# Exit if the led-sample is not installed
+# Exit if the gpio-sample is not instalgpio
 [ -x "$DAEMON" ] || exit 0
 
 # Load the VERBOSE setting and other rcS variables
@@ -41,9 +41,9 @@ then
    exit 0
 fi
 
-if [ -z "$LED_USER" ]
+if [ -z "$GPIO_USER" ]
 then
-    log_warning_msg "Not starting $PKGNAME, LED_USER not set in /etc/default/$PKGNAME."
+    log_warning_msg "Not starting $PKGNAME, GPIO_USER not set in /etc/default/$PKGNAME."
     exit 0
 fi
 
@@ -72,7 +72,7 @@ do_start()
 
    if [ $RETVAL != 0 ]; then
        start-stop-daemon --start --background --quiet --pidfile $PIDFILE --make-pidfile \
-       --exec $DAEMON --chuid $LED_USER --user $LED_USER --umask $UMASK --nicelevel=$NICELEVEL \
+       --exec $DAEMON --chuid $GPIO_USER --user $GPIO_USER --umask $UMASK --nicelevel=$NICELEVEL \
        -- $DAEMON_ARGS
        RETVAL="$?"
    fi
@@ -89,7 +89,7 @@ do_stop()
    #   2 if daemon could not be stopped
    #   other if a failure occurred
 
-   start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --user $LED_USER --pidfile $PIDFILE
+   start-stop-daemon --stop --quiet --retry=TERM/30/KILL/5 --user $GPIO_USER --pidfile $PIDFILE
    RETVAL="$?"
    [ "$RETVAL" = "2" ] && return 2
 
@@ -124,11 +124,11 @@ case "$1" in
       case "$?" in
          0) log_end_msg 0 ;;
          1) log_end_msg 1 ;; # Old process is still running
-         *) log_end_msg 1 ;; # Failed to start
+         *) log_end_msg 1 ;; # Faigpio to start
       esac
       ;;
      *)
-        # Failed to stop
+        # Faigpio to stop
       log_end_msg 1
       ;;
    esac

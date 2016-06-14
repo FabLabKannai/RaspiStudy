@@ -11,49 +11,87 @@ import wiringpi
 # LedController
 #
 # Usage
+#    w : wakeup
+#    q : quit
 #    0 : LED Off
 #    1 : LED On
 #    2 : LED Blink
 #
 class LedController():
-	led_th = None	
+	TIME_QUIT = 0.5  # 0.5 sec
+	ledThread = None	
 	pin = 0
+	isRun = False
+	isFirst = True
 
 	def __init__(self, pin):
 		self.pin = int(pin)
-		self.led_th = LedThread(self.pin)
 
-	def start(self):
-		wiringpi.wiringPiSetupGpio()
-		wiringpi.pinMode(self.pin, wiringpi.OUTPUT)
-		self.led_th.startRun()
+	def wakeup(self):
+		if self.isFirst:
+			# setup, if first
+			self.isFirst = False
+			wiringpi.wiringPiSetupGpio()
+			wiringpi.pinMode(self.pin, wiringpi.OUTPUT)
+		self.quit()
+		self.ledThread = LedThread(self.pin)		
+		self.ledThread.startRun()
+		self.ledThread.startBlink()
 
-	def stop(self):
-		self.led_th.stopRun()
+	def quit(self):
+		if self.ledThread:
+			# remove LED Thread
+			self.ledThread.stopBlink()
+			self.ledThread.stopRun()
+			time.sleep(self.TIME_QUIT)	
+			self.ledThread = None
+		wiringpi.digitalWrite(self.pin, wiringpi.LOW) 
 
 	def command(self, c):
-		if c == '0':
+		if c == 'w':
+			if not self.isRun: 
+				# Wakeup, if not run
+				print 'Wakeup'
+				self.isRun = True
+				self.wakeup()
+		elif not self.isRun:
+			# nothing to do, if not run
+			return
+		elif c == 'q':
+			# Qiut
+			print 'Qiut'
+			self.isRun = False
+			self.quit()
+		elif c == '0':			
 			# LED off
 			print 'LED off'
-			self.led_th.stopBlink()
+			self.stopBlink()
 			wiringpi.digitalWrite(self.pin, wiringpi.LOW) 
 		elif c == '1':			
 			# LED on
 			print 'LED on'
-			self.led_th.stopBlink()
+			self.stopBlink()
 			wiringpi.digitalWrite(self.pin, wiringpi.HIGH) 
 		elif c == '2':
 			# LED blink
 			print 'LED blink'
-			self.led_th.startBlink()
-								
+			self.startBlink()
+
+	def startBlink(self):
+		if self.ledThread:
+			self.ledThread.startBlink()
+
+	def stopBlink(self):
+		if self.ledThread:
+			self.ledThread.stopBlink()
+										
 # end of class
 
 #
 # LED Thread class for blink
 # 
 class LedThread(threading.Thread):
-	TIME_BLINK = 1.0  # 1 sec
+	TIME_BLINK = 1  # 1 sec
 	TIME_SLEEP = 0.1 # 0.1 sec
 	MAX_CNT = int( TIME_BLINK / TIME_SLEEP )
 	pin = 0
@@ -68,10 +106,10 @@ class LedThread(threading.Thread):
 	def startRun(self):
 		self.isRun = True
 		self.start()
-	
+
 	def stopRun(self):
 		self.isRun = False
-		
+
 	def startBlink(self):
 		self.isBlink = True
 
@@ -102,7 +140,6 @@ PIN = 17 # con-pin 11
 
 # start LED
 led = LedController(PIN)
-led.start()
 
 try:
 	# endless loop
@@ -114,5 +151,5 @@ except KeyboardInterrupt:
 	# exit the loop, if key interrupt
 	pass
 
-led.stop()
+led.quit()
 # main end
