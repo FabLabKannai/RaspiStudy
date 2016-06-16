@@ -20,7 +20,7 @@ Tools for Raspberry Pi <br/>
 - vncboot <br/>
   Script to start tightvncserver daemon <br/>
 - autossh <br/>
-  Script to start autossh daemon <br/>
+  Template script to start autossh daemon <br/>
 - ssh_config <br/>
   SSH client configuration files, for autossh <br/>
 
