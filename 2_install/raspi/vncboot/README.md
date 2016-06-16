@@ -7,7 +7,7 @@ Script to start tightvncserver daemon
 > $ cd RaspiStudy/2_install/raspi/vncboot/ <br/>
 > $ sudo cp vncboot /etc/init.d/ <br/>
 > $ sudo chmod 755 /etc/init.d/vncboot <br/>
-> $ sudo update-rc.d vncboot defaults <br/>
+> $ sudo insserv vncboot <br/>
 
 ### Blog (Japanese)
 http://android.ohwada.jp/archives/6611

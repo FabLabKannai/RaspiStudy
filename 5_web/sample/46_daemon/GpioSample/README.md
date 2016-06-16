@@ -41,4 +41,4 @@ $ sudo /etc/init.d/gpio-sample start <br/>
 
 ### Usage
 Access using web browser. <br/>
-http://rasoberrypi.local:5010/ <br/>
+http://raspberrypi.local:5010/ <br/>
