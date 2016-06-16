@@ -1,0 +1,7 @@
+#
+# ssh config for autossh
+# 2016-05-20 K.OHWADA
+#
+
+ServerAliveInterval   30
+ServerAliveCountMax   3

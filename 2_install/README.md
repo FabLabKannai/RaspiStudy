@@ -19,6 +19,10 @@ Tools for Raspberry Pi <br/>
   Keyboard default file for Japanese 109 keyboard <br/>
 - vncboot <br/>
   Script to start tightvncserver daemon <br/>
+- autossh <br/>
+  Script to start autossh daemon <br/>
+- ssh_config <br/>
+  SSH client configuration files, for autossh <br/>
 
 ## Tools  on MAC
 Tools for Raspberry Pi  on MAC <br/>

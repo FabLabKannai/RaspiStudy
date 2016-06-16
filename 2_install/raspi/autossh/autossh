@@ -1,0 +1,109 @@
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          autossh
+# Required-Start:    $syslog $network sshd 
+# Required-Stop:     $syslog $network sshd
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: autossh tunnel
+### END INIT INFO
+
+#
+# Author:	Andreas Olsson <andreas@arrakis.se>
+# Version:	@(#)autossh_tunnel.foo  0.1  27-Aug-2008  andreas@arrakis.se
+# https://git.lysator.liu.se/olsson/bogoblog/blob/9b3e98af4b531a563e4319dd2c53e184902732a3/content/files/autossh_tunnel.foo
+#
+# modified : 20-May-2015 K.OHWADA
+#
+
+### SETTINGS ###
+# make a uniquely named copy of this template.
+#
+# autossh monitoring port (unique)
+# MPORT=54321
+# remote server
+RSERVER="example.com"
+# remote port
+RPORT=10022
+# remote user
+RUSER="foobar"
+# local port
+LPORT=22
+# local user
+LUSER="pi"
+# identity file
+IDENTITY="/home/${LUSER}/.ssh/id_rsa"
+# You must use the real autossh binary, not a wrapper.
+DAEMON=/usr/lib/autossh/autossh
+# daemon arguments
+DAEMON_ARGS="-M 0 -q -f -N -i ${IDENTITY} -R ${RPORT}:127.0.0.1:${LPORT} ${RUSER}@${RSERVER}"
+#
+### END SETTINGS ###
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# script name
+NAME=`basename $0`
+# description
+DESC="ssh tunnel"
+# pid file
+PIDFILE=/var/run/${NAME}.pid
+# init.d file
+SCRIPTNAME=/etc/init.d/${NAME}
+
+test -x $DAEMON || exit 0
+
+# export AUTOSSH_PORT=${MPORT}
+# export AUTOSSH_PIDFILE=${PIDFILE}
+
+#	Function that starts the daemon/service.
+d_start() {
+	start-stop-daemon --start --quiet  --background \
+              --pidfile $PIDFILE \
+              --chuid $LUSER --user $LUSER \
+              --exec $DAEMON -- $DAEMON_ARGS
+	if [ $? -gt 0 ]; then
+	    echo -n " not started (or already running)"
+	else
+	    sleep 1
+	    start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+		--test --exec $DAEMON > /dev/null || echo -n " not started"
+	fi
+
+}
+
+#	Function that stops the daemon/service.
+d_stop() {
+	start-stop-daemon --stop --quiet --pidfile $PIDFILE \
+		--exec $DAEMON \
+		|| echo -n " not running"
+}
+
+
+case "$1" in
+  start)
+	echo -n "Starting $DESC: $NAME"
+	d_start
+	echo "."
+	;;
+  stop)
+	echo -n "Stopping $DESC: $NAME"
+	d_stop
+	echo "."
+	;;
+
+  restart)
+	echo -n "Restarting $DESC: $NAME"
+	d_stop
+	sleep 1
+	d_start
+	echo "."
+	;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|stop|restart}" >&2
+	exit 3
+	;;
+esac
+
+exit 0
