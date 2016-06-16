@@ -1,10 +1,11 @@
 # mjpg-streamer - raspi 
 Script to start mjpg-streamer daemon <br/>
 
+### Change log
 original https://github.com/meinside/rpi-mjpg-streamer <br/>
 
 modified <br/>
-add -y (YUYV format) for Buffalo BSW20KM15 <br/>
+add -y (YUYV format) for [Buffalo BSW20KM15](http://buffalo.jp/product/multimedia/web-camera/bsw20km15/) <br/>
 
 ### Setup
 Please modify the template file to suit your environment <br/>
