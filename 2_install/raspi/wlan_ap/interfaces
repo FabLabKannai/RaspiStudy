@@ -1,5 +1,6 @@
 ### /etc/network/interfaces
 ### modified: 2016-06-01 K.OHWADA
+### wlan0 address 192.168.42.1
 ### reference https://www.maketecheasier.com/set-up-raspberry-pi-as-wireless-access-point/
 
 # interfaces(5) file used by ifup(8) and ifdown(8)
