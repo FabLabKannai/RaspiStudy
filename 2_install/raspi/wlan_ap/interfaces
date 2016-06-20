@@ -1,0 +1,36 @@
+### /etc/network/interfaces
+### modified: 2016-06-01 K.OHWADA
+### reference https://www.maketecheasier.com/set-up-raspberry-pi-as-wireless-access-point/
+
+# interfaces(5) file used by ifup(8) and ifdown(8)
+
+# Please note that this file is written to be used with dhcpcd
+# For static IP, consult /etc/dhcpcd.conf and 'man dhcpcd.conf'
+
+# Include files from /etc/network/interfaces.d:
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+iface eth0 inet manual
+
+### 2016-06-01
+#allow-hotplug wlan0
+#iface wlan0 inet manual
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+### 2016-06-01
+#allow-hotplug wlan1
+#iface wlan1 inet manual
+#    wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+
+### 2016-06-01 added
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.42.1
+netmask 255.255.255.0
+gateway 192.168.1.1
+
+### 2016-06-01 added
+pre-up iptables-restore < /etc/iptables.ipv4.nat
