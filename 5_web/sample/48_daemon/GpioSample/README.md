@@ -4,6 +4,9 @@ running on Raspberry Pi with Flask <br/>
 
 ## GPIO Controller Daemon
 Web app to control GPIO <br/>
+- turn on or off LED, when click button on Web <br/>
+- display status of the button on Raspi <br/>
+- control servo, when slide bar on Web <br/>
 <img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/48_daemon.png" width="300" /> <br/>
 
 ### Requirements
