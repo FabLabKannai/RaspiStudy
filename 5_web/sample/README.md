@@ -23,7 +23,9 @@
 - 42 static template
 - 43 dynamic template
 - 44 jQuery
-- 45 GPIO controller
-- 46 GPIO daemon
+- 45 Camera
+- 46 Open JTalk
+- 47 GPIO controller
+- 48 GPIO daemon
 
-<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/46_daemon.png" width="200" /> <br/>
+<img src="https://github.com/FabLabKannai/RaspiStudy/blob/master/5_web/docs/48_daemon.png" width="200" /> <br/>

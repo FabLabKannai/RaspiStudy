@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- 2016-06-01 K.OHWADA @ FabLab Kannai -->
+<html>
+<head>
+<title>Flask Camera</title>
+<meta charset="utf-8">
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+// take a picture
+function take_picture(){
+	var data = {
+		"take": 1
+	};
+	$.post("/action", data, show_picture);
+}
+// show_picture
+function show_picture(data, status) {	
+	var src = "/static/images/dot.png";	
+	var href = "";
+	var idx = data.indexOf( "name" );	
+	if ( idx != -1 ) {
+		var obj = $.parseJSON( data );
+		if ( obj.name != null ) {
+			// if valid param
+			src = "/image?name=" + obj.name;
+			href =  "/download?name=" + obj.name;
+		}
+	}
+	$("#img").attr("src", src);
+	if (href) {
+		$("#download").attr("href", href);
+		$("#download").show();
+	} else {
+		$("#download").hide();
+	}
+}
+</script>
+<style type="text/css">
+#download {
+	display: none;
+}
+</style>
+</head>
+<body id="body">
+<h1>Flask Camera</h1>
+<img src="http://{{ ip_addr }}:8080/?action=stream" /><br/>
+<button type="button" onClick="take_picture();">Take a picture</button><br/><br/>
+<img id="img" src="/static/images/dot.png" /><br/>
+<a id="download" href="">Download</a><br/>
+</body>
+</html>

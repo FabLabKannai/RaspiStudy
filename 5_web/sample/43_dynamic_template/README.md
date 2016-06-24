@@ -3,7 +3,7 @@
 running on Raspberry Pi with Flask <br/>
 
 ## dynamic template
-display "Hello World!" using dynamic template <br/>
+display "Hello World!" using dynamic template 
 
 ### Setup
 transfer this directory "43_dynamic_template" under /tmp <br/>

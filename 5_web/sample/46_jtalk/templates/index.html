@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- 2016-06-01 K.OHWADA @ FabLab Kannai -->
+<html>
+<head>
+<title>Flask Jtalk</title>
+<meta charset="utf-8">
+<script src="/static/js/jquery.min.js"></script>
+<script type="text/javascript">
+// post
+function speech(){
+	var data = {
+		"speech": $("#speech").val()
+	};
+	$.post("/action", data);
+}
+</script>
+<style type="text/css">
+#speech {
+	width: 400px;
+}
+</style>
+</head>
+<body id="body">
+<h1>Flask Jtalk</h1>
+<input type="text" id="speech" value="こんにちわ ジェイトークです" /><br/>
+<button type="button" onClick="speech();">Speech</button><br/>
+</body>
+</html>

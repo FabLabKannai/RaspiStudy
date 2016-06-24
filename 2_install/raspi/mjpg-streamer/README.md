@@ -1,5 +1,5 @@
 # mjpg-streamer - raspi 
-Script to start mjpg-streamer daemon <br/>
+Script to start [mjpg-streamer](https://sourceforge.net/projects/mjpg-streamer/) daemon <br/>
 
 ### Change log
 original https://github.com/meinside/rpi-mjpg-streamer <br/>
@@ -25,5 +25,9 @@ add -y (YUYV format) for [Buffalo BSW20KM15](http://www.amazon.co.jp/gp/product/
 Please modify the template file to suit your environment <br/>
 And copy the modified file to under directory /etc/init.d/ <br/>
 
+> $ cd /tmp <br/>
+> $ git clone https://github.com/FabLabKannai/RaspiStudy.git <br/>
+> $ cd RaspiStudy/2_install/raspi/mjpg-streamer/ <br/>
+> $ sudo cp mjpg-streamer /etc/init.d/mjpg-streamer <br/>
 > $ sudo chmod 755 /etc/init.d/mjpg-streamer <br/>
-> $ sudo insserv mjpg-streamer <br/>
+> $ sudo insserv mjpg-streamer<br/>
