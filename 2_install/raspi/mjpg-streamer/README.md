@@ -15,8 +15,8 @@ add -y (YUYV format) for [Buffalo BSW20KM15](http://www.amazon.co.jp/gp/product/
 > $ sudo apt-get install v4l-utils <br/>
 
 > $ cd ~ <br/>
-> $ mkdir builds
-> $ cd builds
+> $ mkdir builds <br/>
+> $ cd builds <br/>
 > $ svn co https://svn.code.sf.net/p/mjpg-streamer/code/ mjpg-streamer mjpg-streamer <br/>
 > $ cd mjpg-streamer <br/>
 > $ make <br/>
