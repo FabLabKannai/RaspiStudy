@@ -17,7 +17,7 @@ add -y (YUYV format) for [Buffalo BSW20KM15](http://www.amazon.co.jp/gp/product/
 > $ cd ~ <br/>
 > $ mkdir builds <br/>
 > $ cd builds <br/>
-> $ svn co https://svn.code.sf.net/p/mjpg-streamer/code/ mjpg-streamer mjpg-streamer <br/>
+> $ svn co https://svn.code.sf.net/p/mjpg-streamer/code/mjpg-streamer mjpg-streamer <br/>
 > $ cd mjpg-streamer <br/>
 > $ make <br/>
 
