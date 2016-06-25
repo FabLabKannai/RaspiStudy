@@ -10,6 +10,7 @@ $ sudo apt-get install php5 <br/>
 transfer this directory "2_apache" under /var/www/html/ <br/>
 > $ cd /tmp/ <br/>
 > $ sudo cp -R 2_apache /var/www/html <br/>
+> $ sudo chmod 777 /var/www/html/2_apache/24_post/person.json <br/>
 
 ### Sample
 - Apache <br/>
