@@ -5,23 +5,28 @@
 from flask import Flask, render_template, request
 import subprocess
 import codecs
-	
-CMD_JTALK = "/usr/bin/open_jtalk"
-CMD_APLAY = "/usr/bin/aplay"
 
+# open_jtalk command	
+CMD_JTALK = "/usr/bin/open_jtalk"
+OPT_M = "/usr/share/hts-voice/mei/mei_normal.htsvoice"
+OPT_X = "/var/lib/mecab/dic/open-jtalk/naist-jdic"
 FILE_TEXT = "/tmp/jtalk.txt"
 FILE_WAVE = "/tmp/jtalk.wav"
 
-OPT_M = "/usr/share/hts-voice/mei/mei_normal.htsvoice"
-OPT_X = "/var/lib/mecab/dic/open-jtalk/naist-jdic"
+# aplay command	
+CMD_APLAY = "/usr/bin/aplay"
 
-# create & play voice file using jtalk
+# create voice file using open_jtalk
+# play voice file using aplay
 def jtalk(text):
+	# save to text file
 	f = codecs.open(FILE_TEXT, "w", "utf-8")
 	f.write(text)
 	f.close()	
+	# create voice file using open_jtalk
 	jtalk_args = [CMD_JTALK, "-m", OPT_M, "-x", OPT_X, "-ow", FILE_WAVE, FILE_TEXT]
 	subprocess.check_call(jtalk_args)
+	# play voice file using aplay
 	aplay_args = [CMD_APLAY, "--quiet", FILE_WAVE]
 	subprocess.check_call(aplay_args)
 

@@ -28,6 +28,7 @@ function show_picture(data, status) {
 	}
 	$("#img").attr("src", src);
 	if (href) {
+		// if valid param
 		$("#download").attr("href", href);
 		$("#download").show();
 	} else {
@@ -36,6 +37,7 @@ function show_picture(data, status) {
 }
 </script>
 <style type="text/css">
+// Hide at the first time
 #download {
 	display: none;
 }
@@ -43,8 +45,11 @@ function show_picture(data, status) {
 </head>
 <body id="body">
 <h1>Flask Camera</h1>
+<!-- Motion JPEG streaming -->
 <img src="http://{{ ip_addr }}:8080/?action=stream" /><br/>
+<!-- You can take a picture -->
 <button type="button" onClick="take_picture();">Take a picture</button><br/><br/>
+<!-- Dsiplay picture -->
 <img id="img" src="/static/images/dot.png" /><br/>
 <a id="download" href="">Download</a><br/>
 </body>
