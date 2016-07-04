@@ -1,5 +1,7 @@
 # backup_sd - mac
 Backup SD card of Raspberry Pi for MAC. <br/>
+only partition area, not the full area. <br/>
+for example, only 4GB of the 32GB <br/>
 
 ### Install
 > $ git clone https://github.com/FabLabKannai/RaspiStudy.git <br/>
